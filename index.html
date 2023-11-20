@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Mina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <h1>Moda Mina</h1>
+                <input type="text" id="userNameInput" placeholder="Digite seu nome">
+                <button class="btn-salvar" onclick="saveUserName()">Salvar</button>
+            </div>
+        </div>
+        <nav>
+            <a href="compra.html">Carrinho</a>
+            <a href="favorito.html">Favoritos</a>
+        </nav>
+    </header>
+    <div class="container mb-5 mt-5">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./imagenscarrousel/slide2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./imagenscarrousel/slide3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="products" class="row justify-content-center">
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/bols1.png" class="card-img-top" alt="bolsa rosa pequena">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolsa rosa pequena</h5>
+                        <p class="card-text">R$ 50.00</p>
+                        <button onclick="addToCart(1)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(1)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/bols2.jpg" class="card-img-top" alt="Bolsa couro branco">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolsa couro branco</h5>
+                        <p class="card-text">R$ 90.00</p>
+                        <button onclick="addToCart(2)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(2)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/bols3.png" class="card-img-top" alt="Bolsa pequena azul">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolsa pequena azul</h5>
+                        <p class="card-text">R$ 45.90</p>
+                        <button onclick="addToCart(3)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(3)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/anel2.jpg" class="card-img-top" alt="Anel em X">
+                    <div class="card-body">
+                        <h5 class="card-title">Anel em X</h5>
+                        <p class="card-text">R$ 29.90</p>
+                        <button onclick="addToCart(4)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(4)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 2 -->
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/anel3.png" class="card-img-top" alt="Anel em pedras e brilhantes">
+                    <div class="card-body">
+                        <h5 class="card-title">Anel em pedras e brilhantes</h5>
+                        <p class="card-text">R$ 95.00</p>
+                        <button onclick="addToCart(5)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(5)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/anel4.jpg" class="card-img-top" alt="Anel casal borboleta">
+                    <div class="card-body">
+                        <h5 class="card-title">Anel casal borboleta</h5>
+                        <p class="card-text">R$ 89.90</p>
+                        <button onclick="addToCart(6)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(6)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 5 -->
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/brin2.jpg" class="card-img-top" alt="Brinco de pato">
+                    <div class="card-body">
+                        <h5 class="card-title">Brinco de pato</h5>
+                        <p class="card-text">R$ 19.90</p>
+                        <button onclick="addToCart(7)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(7)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 6 -->
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/brin4.png" class="card-img-top" alt="Brinco de flor">
+                    <div class="card-body">
+                        <h5 class="card-title">Brinco de flor</h5>
+                        <p class="card-text">R$ 10.90</p>
+                        <button onclick="addToCart(8)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(8)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 7 -->
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/colar2.jpg" class="card-img-top" alt="Colar de cobra">
+                    <div class="card-body">
+                        <h5 class="card-title">Colar de cobra</h5>
+                        <p class="card-text">R$ 45.90</p>
+                        <button onclick="addToCart(9)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(9)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 8 -->
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/colar4.jpg" class="card-img-top" alt="Colar de borboleta">
+                    <div class="card-body">
+                        <h5 class="card-title">Colar de borboleta</h5>
+                        <p class="card-text">R$ 49.90</p>
+                        <button onclick="addToCart(10)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(10)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 9 -->
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/rou1.jpg" class="card-img-top" alt="Vestido colorido quadriculado">
+                    <div class="card-body">
+                        <h5 class="card-title">Vestido colorido quadriculado</h5>
+                        <p class="card-text">R$ 99.90</p>
+                        <button onclick="addToCart(11)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(11)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/rou2.jpg" class="card-img-top" alt="Vestido abacaxi">
+                    <div class="card-body">
+                        <h5 class="card-title">Vestido abacaxi</h5>
+                        <p class="card-text">R$ 85.90</p>
+                        <button onclick="addToCart(12)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(12)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/rou3.jpg" class="card-img-top" alt="Vestido plus size rosa">
+                    <div class="card-body">
+                        <h5 class="card-title">Vestido plus size rosa</h5>
+                        <p class="card-text">R$ 88.90</p>
+                        <button onclick="addToCart(13)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(13)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/rou4.png" class="card-img-top" alt="Vestido azul">
+                    <div class="card-body">
+                        <h5 class="card-title">Vestido azul</h5>
+                        <p class="card-text">R$ 114.90</p>
+                        <button onclick="addToCart(14)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(14)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/sap1.jpg" class="card-img-top" alt="Chinelo Branco">
+                    <div class="card-body">
+                        <h5 class="card-title">Chinelo Branco</h5>
+                        <p class="card-text">R$ 45.90</p>
+                        <button onclick="addToCart(15)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(15)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 14 -->
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/sap2.jpg" class="card-img-top" alt="Sapato salto alto vermelho">
+                    <div class="card-body">
+                        <h5 class="card-title">Sapato salto alto vermelho</h5>
+                        <p class="card-text">R$ 290.00</p>
+                        <button onclick="addToCart(16)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(16)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/sap3.png" class="card-img-top" alt="Salto alto borboleta">
+                    <div class="card-body">
+                        <h5 class="card-title">Salto alto borboleta</h5>
+                        <p class="card-text">R$ 315.90</p>
+                        <button onclick="addToCart(17)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(17)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/shor1.jpg" class="card-img-top" alt="Short couro fake">
+                    <div class="card-body">
+                        <h5 class="card-title">Short couro fake</h5>
+                        <p class="card-text">R$ 59.90</p>
+                        <button onclick="addToCart(18)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(18)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/shor3.jpg" class="card-img-top" alt="Short jeans desfiado">
+                    <div class="card-body">
+                        <h5 class="card-title">Short jeans desfiado</h5>
+                        <p class="card-text">R$ 35.90</p>
+                        <button onclick="addToCart(19)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(19)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ls-product">
+                <div class="card">
+                    <img src="./prods/shor4.jpg" class="card-img-top" alt="Short jeans">
+                    <div class="card-body">
+                        <h5 class="card-title">Short jeans</h5>
+                        <p class="card-text">R$ 45.90</p>
+                        <button onclick="addToCart(20)" class="btn btn-primary">Adicionar ao Carrinho</button>
+                        <button onclick="addToFavorites(20)" class="btn btn-secondary btn-favorite">Adicionar aos
+                            Favoritos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="successMessage"></div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-12">
+                &copy; 2023 Moda Mina
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

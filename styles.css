@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+
+input {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.btn-salvar {
+    padding: 7px 10px;
+    background-color: #af4c91;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-salvar:hover {
+    background-color: #a04577 !important;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 20px;
+}
+
+.ls-product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Add a fixed height for consistency */
+    overflow: hidden;
+}
+
+.ls-product img {
+    max-height: 100%;
+    /* Adjust the max-height property for images */
+    width: 100%;
+    object-fit: cover;
+}
+
+.ls-product h5 {
+    margin: 0;
+}
+
+#userName {
+    color: #a04577;
+}
+
+#successMessage {
+    display: none;
+    color: green;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.alert-container {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.alert-card {
+    background-color: rgb(0, 128, 58);
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.alert-text {
+    margin: 0;
+}
+
+#products .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#products .ls-product {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+}
+
+#products .ls-product img {
+    width: 100%;
+    height: auto;
+}
+
+.ul-favorites {
+    display: flex;
+    justify-content: center;
+}
+
+#favoritesListPage {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carro-compra {
+    display: flex;
+    justify-content: center;
+}
+
+#cartList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.campos {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+.btn-cupom {
+    background-color: #af4c91 !important;
+    border-color: #af4c91 !important;
+}
+
+button.deleteButton {
+    padding: 8px 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+button.deleteButton:hover {
+    background-color: red;
+}
+
+@media (max-width: 767px) {
+    #products .ls-product {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 575px) {
+    #products .ls-product {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+}
+
+.ls-product .card-body button {
+    padding: 5px 10px;
+    margin: 5px;
+    display: block;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+
+.ls-product .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ls-product .card-body h5,
+.ls-product .card-body p {
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: #af4c91 !important;
+    border-color: #a04577 !important;
+}
+
+.ls-product .card-body .btn-favorite {
+    background-color: #5bc0de !important;
+    border-color: #46b8da !important;
+    color: #fff;
+}
+
+.btn-finalizar{
+    display: flex;
+    justify-content: center; 
+}
