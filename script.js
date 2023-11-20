@@ -195,3 +195,25 @@ function updateUserName() {
 document.addEventListener("DOMContentLoaded", function () {
   updateUserName();
 });
+
+function calcularTotalCarrinho() {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let total = 0;
+  
+    for (let i = 0; i < cartItems.length; i++) {
+      const priceString = cartItems[i].split(" - R$ ")[1];
+      const itemPrice = parseFloat(priceString);
+  
+      total += itemPrice;
+    }
+  
+    return total.toFixed(2);
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    updateUserName();
+    loadCartFromStorage();
+    const totalCarrinho = calcularTotalCarrinho();
+    document.getElementById("totalCarrinho").textContent = `Total: R$ ${totalCarrinho}`;
+  });
+  
